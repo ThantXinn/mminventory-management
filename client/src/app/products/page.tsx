@@ -2,6 +2,7 @@
 "use client";
 import { useCreateProductMutation, useGetProductsQuery } from "@/state/api";
 import { PlusCircle, Search } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import Header from "../(components)/Header";
 import Rating from "../(components)/Rating";
@@ -75,7 +76,15 @@ const Products = () => {
               key={product.productId}
               className='border shadow rounded-md p-4 max-w-full w-full mx-auto'>
               <div className='flex flex-col items-center'>
-                img
+                <Image
+                  src={`https://s3-mminventorymanagement.s3.ap-northeast-1.amazonaws.com/product${
+                    Math.floor(Math.random() * 3) + 1
+                  }`}
+                  alt={product.name}
+                  width={150}
+                  height={150}
+                  className='mb-3 rounded-2xl h-36 w-36'
+                />
                 <h3 className='text-lg text-gray-900 font-semibold'>
                   {product.name}
                 </h3>

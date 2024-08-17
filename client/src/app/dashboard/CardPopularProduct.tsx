@@ -2,6 +2,7 @@
 
 import { useGetDashboardMetricsQuery } from "@/state/api";
 import { ShoppingCart } from "lucide-react";
+import Image from "next/image";
 import Rating from "../(components)/Rating";
 
 const CardPopularProduct = () => {
@@ -22,7 +23,15 @@ const CardPopularProduct = () => {
                 key={item.productId}
                 className='flex items-center justify-between gap-3 px-5 py-7 border-b'>
                 <div className='flex items-center gap-3'>
-                  <div>img</div>
+                  <Image
+                    src={`https://s3-mminventorymanagement.s3.ap-northeast-1.amazonaws.com/product${
+                      Math.floor(Math.random() * 3) + 1
+                    }`}
+                    alt={item.name}
+                    width={48}
+                    height={48}
+                    className='rounded-lg h-14 w-14'
+                  />
                   <div className='flex flex-col justify-between gap-1'>
                     <div className='font-bold text-gray-700'>{item.name}</div>
                     <div className='flex text-sm items-center'>

@@ -13,6 +13,7 @@ import {
   SlidersHorizontal,
   User,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -73,7 +74,15 @@ const Sidebar = () => {
         className={`flex gap-3 justify-between md:justify-normal items-center pt-8 ${
           isSideBarCollapsed ? "px-5" : "px-1 md:px-4"
         }`}>
-        <div>logo</div>
+        <Image
+          src={
+            "https://s3-mminventorymanagement.s3.ap-northeast-1.amazonaws.com/logo1.png"
+          }
+          alt='profile'
+          width={27}
+          height={27}
+          className='object-cover rounded h-full'
+        />
         <h1
           className={`${
             isSideBarCollapsed ? "hidden" : "block"

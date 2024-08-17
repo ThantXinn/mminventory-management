@@ -10,7 +10,12 @@ const baseColors = [
   "yellow",
   "purple",
   "indigo",
-  "slate"
+  "slate",
+  "emerald",
+  "sky",
+  "teal",
+  "violet",
+  "stone"
 ]
 
 const shadeMapping = {
@@ -44,7 +49,7 @@ const darkTheme = generateThemesObject(colors, shadeMapping, true);
 const themes = {
   light: {
     ...lightTheme,
-    white: "#ffff"
+    white: "#f5f5f5"
   },
   dark: {
     ...darkTheme,

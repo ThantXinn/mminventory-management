@@ -55,6 +55,7 @@ const SideBarLinks = ({
 };
 const Sidebar = () => {
   const dispatch = useAppDispatch();
+  const isDarkMode = useAppSelector((state) => state.global.isDarkMode);
   const isSideBarCollapsed = useAppSelector(
     (state) => state.global.isSideBarCollapsed,
   );
@@ -75,9 +76,11 @@ const Sidebar = () => {
           isSideBarCollapsed ? "px-5" : "px-1 md:px-4"
         }`}>
         <Image
-          src={
-            "https://s3-mminventorymanagement.s3.ap-northeast-1.amazonaws.com/logo1.png"
-          }
+          src={`${
+            isDarkMode
+              ? "https://s3-mminventorymanagement.s3.ap-northeast-1.amazonaws.com/logo2.png"
+              : "https://s3-mminventorymanagement.s3.ap-northeast-1.amazonaws.com/logo1.png"
+          }`}
           alt='profile'
           width={27}
           height={27}

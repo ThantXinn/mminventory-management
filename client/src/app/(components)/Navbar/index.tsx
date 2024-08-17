@@ -85,11 +85,11 @@ const Navbar = () => {
                 "https://s3-mminventorymanagement.s3.ap-northeast-1.amazonaws.com/userIcon.jpeg"
               }
               alt='profile'
-              width={50}
-              height={50}
+              width={32}
+              height={32}
               className='object-cover rounded-full h-full'
             />
-            <span className='font-semibold'>name</span>
+            <span className='font-semibold'>Adam</span>
           </div>
         </div>
         <Link href={"/settings"}>

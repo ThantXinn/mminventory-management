@@ -89,7 +89,7 @@ const Navbar = () => {
               height={32}
               className='object-cover rounded-full h-full'
             />
-            <span className='font-semibold'>Adam</span>
+            <span className='font-semibold'>Jhon Doe</span>
           </div>
         </div>
         <Link href={"/settings"}>

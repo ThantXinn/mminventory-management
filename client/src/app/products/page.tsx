@@ -79,7 +79,7 @@ const Products = () => {
                 <Image
                   src={`https://s3-mminventorymanagement.s3.ap-northeast-1.amazonaws.com/product${
                     Math.floor(Math.random() * 3) + 1
-                  }`}
+                  }.png`}
                   alt={product.name}
                   width={150}
                   height={150}
